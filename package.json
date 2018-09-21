@@ -1,0 +1,32 @@
+{
+  "name": "EHF-React",
+  "version": "1.0.0",
+  "description": " EHF - Product System ",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "test": "SET NODE_ENV=test & nodemon --exec mocha -R min",
+    "installDeps": "yarn && cd client && yarn"
+  },
+  "author": "David Chen",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "gridfs-stream": "^1.1.1",
+    "lodash": "^4.17.10",
+    "mongoose": "^5.2.13",
+    "multer": "^1.3.1",
+    "multer-gridfs-storage": "^3.1.0",
+    "react-tap-event-plugin": "^3.0.3"
+  }
+}
